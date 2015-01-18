@@ -1,0 +1,3 @@
+[submodule "CollegeToCareer"]
+	path = CollegeToCareer
+	url = https://github.com/SWE-Drexel/CollegeToCareer.git
