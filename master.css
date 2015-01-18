@@ -1,0 +1,404 @@
+/*Website: Drexel University SWE
+Last updated: April 2013
+Author: Katelyn Godfrey - katelyngodfrey.com
+
+=== Color Scheme ===
+
+Warm Medium Grey - 534f43
+Dark Dark Grey - 2e2e31
+Medium Blue - 678cab
+Light Blue - aedaff
+Orange - ff800f
+*/
+
+/*grid background*/
+html, body
+{
+	height: 100%;
+	background-image:url(img/grid_background.png); 
+	text-align:center; /*For IE6 Shenanigans*/
+}
+/*navigation, puts triangle on active tab*/
+body.home #mainNav li.home a,
+body.about #mainNav li.about a,
+body.events #mainNav li.events a,
+body.committees #mainNav li.committees a,
+body.contact #mainNav li.contact a
+{
+	color: #678cab;
+	background:url(img/nav_triangle.png) no-repeat center bottom;
+}
+	/*remove styling on children*/
+	a.child  
+	{
+		color: #534f43 !important;
+		background: none !important;
+	}
+	a.child:hover
+	{
+		color:#ff800f !important;
+	}
+	
+/*general font styling*/
+h1, h2
+{
+	color: #534f43;
+	font-family: 'Arial', cursive;
+}
+h3, h4, h5, h6, p, ul
+{
+	color: #534f43;
+	font-family: 'Arial', sans-serif;
+}
+a
+{
+	color: #ff800f;
+}
+	a:hover
+	{
+		color: #678cab;
+	}
+#wrap
+{
+	min-height:100%;
+}
+
+#header
+{
+	background-color: #675978;
+}
+	#title
+	{
+		width: 900px;
+		margin: 0 auto;
+		text-align: center;
+		padding: 22px 0 20px 0;
+		background:url(img/swe_logo.png) no-repeat left, url(img/drexel_logo.png)no-repeat right;
+		
+	}
+		#title h1
+		{
+			margin-left: 125px;
+			font-family: 'Arial', cursive;
+			font-size:2.3em;
+			line-height:1.2em;
+			color: #DDC251;
+			text-shadow: 2px 3px 0px #678cab;
+		}
+		#title h2
+		{
+			margin-left: 225px;
+			font-family: 'Arial', cursive;
+			font-size:1.8em;
+			line-height:1.0em;
+			font-style:italic;
+			color: #fff;
+			text-shadow: 2px 3px 0px #678cab;
+		}
+		
+#navigation
+{
+	background-color: #fff;
+	height: 35px;
+	margin-top: 12px;
+}
+	#mainNav
+	{
+		width:1000px;
+		margin: 0 auto;
+		background-color: #fff;
+		font-size:1.1em;
+		line-height: 2em;
+		font-family: 'Arial', cursive;
+		/*letter-spacing:.1em;*/
+		list-style:none;
+		text-align:left;
+	}
+		#mainNav li
+		{
+			float: left;
+			position:relative;
+			/*display:inline;*/
+		}
+			#mainNav li a
+			{
+				display:block;
+				color:#534f43;
+				font-family: 'Arial', cursive;
+				font-size: 1.2em;
+				padding:0 30px 0 30px;
+				text-decoration:none;
+			}
+				#mainNav li.drop
+				{
+					font-size: .7em;
+					letter-spacing:.1em;
+				}
+				#mainNav li a:active
+				{
+					color:#ff800f;
+				}
+				#mainNav li a:hover
+				{
+					color:#ff800f;
+				}
+/*NAV DROPDOWN*/
+#mainNav ul
+{
+	background:#fff;
+	/*background:rgba(255,255,255,0);*/
+	list-style:none;
+	position:absolute;
+	left:-9999px; /* Hide off-screen when not needed */
+	z-index:1000;
+}
+	#mainNav ul li
+	{
+		width: 100%;
+		border: 1px solid #eaeaff;
+		border-collapse:collapse;  
+	}
+	#mainNav ul a
+	{
+		white-space:nowrap;
+	}
+	#mainNav li:hover ul
+	{
+		left:0;
+	}
+		#mainNav li:hover a
+		{
+			background:#fff;
+		}
+		#mainNav:hover ul a
+		{
+			text-decoration:none;
+		}
+
+#motto
+{
+	height: 470px; /* same as slideshow img height + 20*/
+	padding-top: 40px;
+}
+	#motto h3
+	{
+		font-family: 'Arial', cursive;
+		font-size: 1.6em;
+		text-align: left;
+		line-height: 1.4em;
+		color: #678cab;
+	}
+
+
+#bodyContent
+{
+	overflow:auto;
+	padding-bottom: 150px; /*must be same height as footer*/
+	width:900px;
+	margin: 0 auto;
+	text-align: left;
+	margin-top: 30px;
+}
+	#bodyContent p
+	{
+		font-family: 'Arial', sans-serif;
+		font-size: 1.1em;
+		line-height: 1.3em;
+		text-align:left;
+		color: #534f43;
+	}
+		#bodyContent p.banner
+		{
+		text-align: center;
+		}
+		#bodyContent p.blue, strong.blue
+		{
+			color: #678cab;
+		}
+	#bodyContent h2
+	{
+		font-family: 'Arial', cursive;
+		font-size: 2.2em;
+		line-height: 1.8em;
+		display: block;
+		clear: both;
+	}
+	#bodyContent h3
+	{
+		font-family: 'Arial', cursive;
+		font-size: 1.8em;
+		line-height: 1.6em;
+		display: block;
+		clear: both;
+	}
+	#bodyContent div.inset_text
+	{
+		background: #fff;
+		border: 2px solid #eaeaff;
+		padding: 20px 20px 5px 20px;
+		/*overflow:auto;*/
+	}
+	
+/*officer page div wrapper fix*/
+    .clearfix:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+    * html .clearfix {height: 1%;}
+    .officer_text
+    {
+    	min-width: 50%;
+    }
+
+/*pushes general text in from titles*/	
+.inset_text
+{
+	float:left;
+	margin-top: 10px;
+	margin-left: 35px;
+}
+	.inset_text p
+	{
+		margin-bottom: 20px;
+	}
+
+	.smaller_inset_text
+	{
+		width: 350px;
+		float:left;
+	}
+
+/*officer page formatting*/
+div.officer
+{
+	min-height: 100px; /*height of officer images*/
+	padding-bottom: 50px;
+}
+	div.officer img
+	{
+		float: left;
+		padding-right: 20px;
+	}
+	div.officer h3
+	{
+		font-family: 'Arial', cursive;
+		font-size: 1.4em;
+		line-height: 1.3em;
+		padding-bottom: 9px;
+	}
+
+div.col1{
+   position: relative;
+   overflow: hidden;
+   float: left;
+   width: 50%;
+   left: 1%;
+}
+div.col2{
+   position: relative;
+   overflow: hidden;
+   float: left;
+   width: 50%;
+   left: 3%;
+}
+
+.pictures{
+	float: left;
+	margin: 8px 20px 30px 50px;
+	border: 7px solid #FFF;
+	/*shadow*/
+	-moz-box-shadow: 0px 3px 4px #534f43;
+	-webkit-box-shadow: 0px 3px 4px #534f43;
+	box-shadow: 0px 3px 4px #534f43;
+	/* For IE 8 */
+	-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#534f43')";
+	/* For IE 5.5 - 7 */
+	filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#534f43');
+}
+
+#container
+{
+	margin-left: -50px;
+}
+
+/*footer formatting*/
+#footer
+{	position:relative;
+	margin-top: -150px; /*neg value of footer hiehgt*/
+	clear:both;
+	background-color: #675978;
+	background:#675978 url(img/dragon.png) repeat-x bottom;
+	height:228px;
+}
+	#footerContent
+	{
+		text-align:left;
+		font-family: 'Arial', sans-serif;
+		margin: 0 auto;
+		width: 100%;	
+		margin-top: 75px;
+	}
+		#footerContent div.col1,
+		#footerContent div.col2
+		
+		{
+			height: 170px;
+			margin-top: 25px;
+		}
+		#footerContent div.col3
+		{
+			height: 170px;
+			margin-top: 25px;
+			width: 100%;
+			background-color:#545046;
+		}
+		#footerContent h2
+		{
+			color: #fff;
+			font-size: 1.6em;
+		} 
+		#footerContent h5
+		{
+			color: #fff;
+			text-align: center;
+			font-size: .9em;
+			display: block;
+			clear: both;
+			line-height: 1.5em;
+		}
+			#footerContent h5 a
+			{
+				font-family: 'Arial', sans-serif;
+			}
+		#footerContent p
+		{
+			color: #fff;
+		}
+		#footerContent a
+		{
+			color: #aedaff;
+			font-family: 'Arial', cursive;
+			font-size: 1.3em;
+		}
+			#footerContent a:hover
+			{
+				color: #678cab;
+			}
+		#footerContent ul
+		{
+			list-style-type:none;
+			 padding: 5px 0px 5px 0;
+		}
+			#footerContent li
+			{
+				display: inline;
+				padding: 0px 2px 0px 2px; 
+			}
+		#footerContent div.tweets
+		{
+			margin-left: 25px;
+			height: 100px;
+		}
