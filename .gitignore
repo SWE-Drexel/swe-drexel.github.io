@@ -1,3 +1,4 @@
 #To ignore all the compressed formats
 *.tar
 *.zip
+/nbproject/private/
