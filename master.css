@@ -15,7 +15,8 @@ Orange - ff800f
 html, body
 {
 	height: 100%;
-	background-image:url(img/grid_background.png); 
+	/* background-image:url(img/grid_background.png); */
+        background-color: #f1f1f1;
 	text-align:center; /*For IE6 Shenanigans*/
 }
 /*navigation, puts triangle on active tab*/
@@ -45,7 +46,7 @@ h1, h2
 	color: #534f43;
 	font-family: 'Arial', cursive;
 }
-h3, h4, h5, h6, p, ul
+h3, h4, h5, h6, p,
 {
 	color: #534f43;
 	font-family: 'Arial', sans-serif;
@@ -65,7 +66,7 @@ a
 
 #header
 {
-	background-color: #675978;
+	background-color: #9397AC;
 }
 	#title
 	{
@@ -73,8 +74,7 @@ a
 		margin: 0 auto;
 		text-align: center;
 		padding: 22px 0 20px 0;
-		background:url(img/swe_logo.png) no-repeat left, url(img/drexel_logo.png)no-repeat right;
-		
+		background:url(img/swe_logo_white.png) no-repeat left, url(img/drexel_logo.png)no-repeat right;
 	}
 		#title h1
 		{
@@ -178,6 +178,7 @@ a
 #motto
 {
 	height: 470px; /* same as slideshow img height + 20*/
+        width: 100%;
 	padding-top: 40px;
 }
 	#motto h3
@@ -199,7 +200,7 @@ a
 	text-align: left;
 	margin-top: 30px;
 }
-	#bodyContent p
+	#bodyContent p       
 	{
 		font-family: 'Arial', sans-serif;
 		font-size: 1.1em;
@@ -207,7 +208,13 @@ a
 		text-align:left;
 		color: #534f43;
 	}
-		#bodyContent p.banner
+		#bodyContent p ul
+                {
+                font-family: 'Arial', sans-serif;
+		font-size: 1.1em;
+		line-height: 1.3em;
+                }
+                #bodyContent p.banner
 		{
 		text-align: center;
 		}
@@ -329,8 +336,8 @@ div.col2{
 {	position:relative;
 	margin-top: -150px; /*neg value of footer hiehgt*/
 	clear:both;
-	background-color: #675978;
-	background:#675978 url(img/dragon.png) repeat-x bottom;
+	background-color: #9397AC;
+	background:#9397AC url(img/dragon.png) repeat-x bottom;
 	height:228px;
 }
 	#footerContent
@@ -397,7 +404,7 @@ div.col2{
 				display: inline;
 				padding: 0px 2px 0px 2px; 
 			}
-		#footerContent div.tweets
+		#footerContent div.tweets                
 		{
 			margin-left: 25px;
 			height: 100px;
