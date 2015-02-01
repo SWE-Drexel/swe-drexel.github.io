@@ -1,8 +1,19 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
-	<head>
-		<script type="text/javascript">
-			window.location.replace("http://stackoverflow.com");
-		</script>
-	</head>
+<html>
+    <head>
+        <script type="text/javascript">
+            if (window.XMLHttpRequest)
+            {// code for IE7+, Firefox, Chrome, Opera, Safari
+                xmlhttp=new XMLHttpRequest();
+            }
+            else
+            {// code for IE6, IE5
+                xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+            }
+            xmlhttp.open("GET","test.xml",false);
+            xmlhttp.send();
+            xmlDoc=xmlhttp.responseXML;
+            console.log(xmlDoc);
+        </script>
+    </head>
 </html>
