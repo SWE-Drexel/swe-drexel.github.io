@@ -59,6 +59,34 @@ a
 	{
 		color: #678cab;
 	}
+
+button
+{
+	margin-top:20px;
+	margin-left:100px;
+    padding:10px 30px;
+    border-radius:10px;
+        -moz-border-radius:10px;
+    border:none;
+    font-size:12px;
+    font-weight:300;
+    width:auto;
+    cursor:pointer;
+    background-color:#ff800f;
+    color:#ffffff;
+    text-transform: uppercase;
+    display:inline;
+    box-shadow: 0 5px 0 #CCC;
+        -moz-box-shadow: 2px 3px 0 #CCC;
+        -webkit-box-shadow: 2px 3px 0 #CCC;
+}
+
+	button a
+	{
+		color: #ffffff;
+		text-decoration: none;
+	}
+
 #wrap
 {
 	min-height:100%;
