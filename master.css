@@ -266,6 +266,14 @@ button
 		display: block;
 		clear: both;
 	}
+        #bodyContent h4
+	{
+		font-family: 'Arial', cursive;
+		font-size: 1.5em;
+		line-height: 1.3em;
+		display: block;
+		clear: both;
+	}
 	#bodyContent div.inset_text
 	{
 		background: #fff;
